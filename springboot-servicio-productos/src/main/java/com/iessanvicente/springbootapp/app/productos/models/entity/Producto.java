@@ -12,6 +12,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.Data;
 
 @Data
@@ -24,6 +26,7 @@ public class Producto implements Serializable {
 	private Long id;
 	private String nombre;
 	private double precio;
+	@JsonIgnore
 	@Temporal(TemporalType.DATE)
 	@Column(name="create_at")
 	private Date createAt;

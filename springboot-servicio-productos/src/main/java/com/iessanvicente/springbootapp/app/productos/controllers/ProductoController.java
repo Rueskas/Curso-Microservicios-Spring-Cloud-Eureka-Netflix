@@ -8,17 +8,15 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.iessanvicente.springbootapp.app.productos.models.entity.Producto;
-import com.iessanvicente.springbootapp.app.productos.models.services.ProductoServiceImpl;
+import com.iessanvicente.springbootapp.app.productos.models.services.IProductoService;
 
 @RestController
-@RequestMapping("/productos")
 public class ProductoController {
 	@Autowired
-	private ProductoServiceImpl service;
+	private IProductoService service;
 	
 	@GetMapping
 	public ResponseEntity<?> getAll(){
@@ -26,11 +24,13 @@ public class ProductoController {
 	}
 
 	@GetMapping("/{id}")
-	public ResponseEntity<?> findById(@PathVariable Long id){
+	public ResponseEntity<?> findById(@PathVariable Long id) throws InterruptedException{
 		Producto p = service.findById(id);
 		if(p == null) {
 			return ResponseEntity.notFound().build();	
 		}
+		
+		Thread.sleep(2000L);
 		return ResponseEntity.ok(p);
 		
 	}
