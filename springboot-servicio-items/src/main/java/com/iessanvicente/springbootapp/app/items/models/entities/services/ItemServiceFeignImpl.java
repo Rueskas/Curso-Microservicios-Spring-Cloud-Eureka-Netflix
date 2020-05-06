@@ -38,4 +38,20 @@ public class ItemServiceFeignImpl implements IItemService {
 		return new Item(producto, cantidad);
 		
 	}
+
+	@Override
+	public Producto save(Producto producto) {
+		return feignClient.save(producto);
+	}
+
+	@Override
+	public Producto update(Producto producto, Long id) {
+		return feignClient.update(producto, id);
+	}
+
+	@Override
+	public void delete(Long id) {
+		feignClient.delete(id);
+		
+	}
 }

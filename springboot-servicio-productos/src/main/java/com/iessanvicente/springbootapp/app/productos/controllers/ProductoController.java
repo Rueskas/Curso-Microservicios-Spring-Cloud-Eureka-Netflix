@@ -44,7 +44,10 @@ public class ProductoController {
 		if(!service.exists(id)) {
 			return ResponseEntity.notFound().build();
 		}
-		return ResponseEntity.ok(service.save(producto));
+		Producto prodSaved = service.findById(id);
+		prodSaved.setNombre(producto.getNombre());
+		prodSaved.setPrecio(producto.getPrecio());
+		return ResponseEntity.ok(service.save(prodSaved));
 	}
 	
 	@DeleteMapping("/{id}")
