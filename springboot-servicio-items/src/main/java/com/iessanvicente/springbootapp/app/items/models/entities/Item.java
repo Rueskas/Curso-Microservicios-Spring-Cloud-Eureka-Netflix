@@ -1,5 +1,7 @@
 package com.iessanvicente.springbootapp.app.items.models.entities;
 
+import com.iessanvicente.springbootapp.app.common.models.entities.Producto;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 

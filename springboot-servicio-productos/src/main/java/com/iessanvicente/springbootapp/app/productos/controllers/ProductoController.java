@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.iessanvicente.springbootapp.app.productos.models.entity.Producto;
+import com.iessanvicente.springbootapp.app.common.models.entities.Producto;
 import com.iessanvicente.springbootapp.app.productos.models.services.IProductoService;
 
 @RestController

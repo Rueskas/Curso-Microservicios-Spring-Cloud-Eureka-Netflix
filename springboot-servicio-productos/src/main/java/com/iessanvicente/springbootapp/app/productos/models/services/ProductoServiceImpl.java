@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.iessanvicente.springbootapp.app.productos.models.entity.Producto;
+import com.iessanvicente.springbootapp.app.common.models.entities.Producto;
 import com.iessanvicente.springbootapp.app.productos.models.repositories.ProductoDao;
 
 @Service

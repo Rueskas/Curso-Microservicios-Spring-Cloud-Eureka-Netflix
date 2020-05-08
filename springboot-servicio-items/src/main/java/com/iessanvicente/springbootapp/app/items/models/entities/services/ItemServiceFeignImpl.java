@@ -9,9 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
+import com.iessanvicente.springbootapp.app.common.models.entities.Producto;
 import com.iessanvicente.springbootapp.app.items.clients.ProductoClienteRest;
 import com.iessanvicente.springbootapp.app.items.models.entities.Item;
-import com.iessanvicente.springbootapp.app.items.models.entities.Producto;
 
 @Primary
 @Service

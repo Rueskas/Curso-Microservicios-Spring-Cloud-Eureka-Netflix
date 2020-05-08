@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.iessanvicente.springbootapp.app.common.models.entities.Producto;
 import com.iessanvicente.springbootapp.app.items.models.entities.Item;
-import com.iessanvicente.springbootapp.app.items.models.entities.Producto;
 import com.iessanvicente.springbootapp.app.items.models.entities.services.IItemService;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 

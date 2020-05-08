@@ -1,4 +1,4 @@
-package com.iessanvicente.springbootapp.app.productos.models.entity;
+package com.iessanvicente.springbootapp.app.common.models.entities;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -12,7 +12,6 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.Data;
 
@@ -26,7 +25,6 @@ public class Producto implements Serializable {
 	private Long id;
 	private String nombre;
 	private double precio;
-	@JsonIgnore
 	@Temporal(TemporalType.DATE)
 	@Column(name="create_at")
 	private Date createAt;

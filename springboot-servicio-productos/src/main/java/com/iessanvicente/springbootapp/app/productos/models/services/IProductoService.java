@@ -2,7 +2,7 @@ package com.iessanvicente.springbootapp.app.productos.models.services;
 
 import java.util.List;
 
-import com.iessanvicente.springbootapp.app.productos.models.entity.Producto;
+import com.iessanvicente.springbootapp.app.common.models.entities.Producto;
 
 public interface IProductoService {
 	public List<Producto> findAll();

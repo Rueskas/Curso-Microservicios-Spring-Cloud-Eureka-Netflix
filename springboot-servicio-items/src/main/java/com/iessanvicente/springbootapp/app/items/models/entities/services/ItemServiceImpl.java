@@ -13,8 +13,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import com.iessanvicente.springbootapp.app.common.models.entities.Producto;
 import com.iessanvicente.springbootapp.app.items.models.entities.Item;
-import com.iessanvicente.springbootapp.app.items.models.entities.Producto;
 
 @Service
 public class ItemServiceImpl implements IItemService {
