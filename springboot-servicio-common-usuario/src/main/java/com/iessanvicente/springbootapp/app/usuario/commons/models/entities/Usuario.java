@@ -38,6 +38,7 @@ public class Usuario implements Serializable{
 	private String apellidos;
 	@Column(unique=true, length=100)
 	private String email;
+	private Integer intentos;
 	
 	@ManyToMany(fetch=FetchType.LAZY)
 	@JoinTable(name="usuarios_roles",

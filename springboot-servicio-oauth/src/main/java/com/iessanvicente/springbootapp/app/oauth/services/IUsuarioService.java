@@ -4,4 +4,6 @@ import com.iessanvicente.springbootapp.app.usuario.commons.models.entities.Usuar
 
 public interface IUsuarioService {
 	public Usuario findByUsername(String username);
+
+	public Usuario updateIntentos(Usuario usuario, Long id);
 }
